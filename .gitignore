@@ -41,3 +41,5 @@ yarn-error.log*
 styles/dist.css
 
 next-env.d.ts
+.yarn/cache
+.yarn/unplugged
