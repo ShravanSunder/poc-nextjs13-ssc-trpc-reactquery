@@ -9,17 +9,6 @@ import { appQueryClient, appQueryContext } from '~~/helpers/appQueryClient';
 import { trpc, trpcClient } from '~~/helpers/trpcClient';
 
 export const ClientWrappers: FC<{ children: ReactNode }> = (props) => {
-  // const [queryClientState] = useState(() => {
-  //   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-  //   return appQueryClient;
-  // });
-  // const [trpcClientState] = useState(() => {
-  //   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-  //   return trpcClient;
-  // });
-
-  // const dehydratedState = getServerDehydratedState();
-  // console.log('dehydrated', dehydratedState);
 
   return (
     <trpc.Provider client={trpcClient} queryClient={appQueryClient}>

@@ -21,9 +21,3 @@ const Component: FC = (_props) => {
 };
 
 export const TestComponent2 = withClientWrappers(Component);
-
-// export const TestComponent: FC = () => (
-//   <ClientWrappers>
-//     <Component></Component>
-//   </ClientWrappers>
-// );
