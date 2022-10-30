@@ -15,7 +15,9 @@ const Component: FC = (_props) => {
 
   return (
     <div>
+      <div>---------</div>
       <p>{hello.data?.name}</p>
+      <div>---------</div>
     </div>
   );
 };

@@ -5,10 +5,7 @@ import { trpcAppRouter } from '../server/routers/trpcAppRouter';
 
 import { createTrpcContext } from '~~/server/trpcContext';
 
-export const getPrefetch = async () => {
-  return createProxySSGHelpers({
-    router: trpcAppRouter,
-    ctx: await createTrpcContext(),
-    transformer: superjson,
-  });
-};
+
+export const serverQuery = trpcAppRouter.createCaller({});
+
+export const serverQueryWithContext = async () => trpcAppRouter.createCaller(await createTrpcContext());

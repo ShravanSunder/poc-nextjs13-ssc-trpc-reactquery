@@ -15,6 +15,7 @@ const testData: HelloTest[] = [
   },
 ];
 
+
 export const trpcAppRouter = t.router({
   getHelloById: t.procedure
     .input((val: unknown) => {
@@ -26,14 +27,16 @@ export const trpcAppRouter = t.router({
       console.log('dfsdfsdsf', input);
 
       if (!!input) {
+        // return the string
         console.log(input);
         return {
           id: '0',
           name: input,
         };
       }
-      const user = testData[0];
 
+      // if not return default data
+      const user = testData[0];
       return user;
     }),
   userCreate: t.procedure.input(z.object({ name: z.string() })).mutation((req) => {

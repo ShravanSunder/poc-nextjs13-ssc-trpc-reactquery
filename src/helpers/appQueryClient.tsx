@@ -10,7 +10,3 @@ export const appQueryContext: Context<QueryClient | undefined> = createContext(a
   QueryClient | undefined
 >;
 
-// export const getServerDehydratedState = (): DehydratedState => {
-//   const data = dehydrate(appQueryClient);
-//   return data;
-// };
